@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <title>Filtro JS</title>
+  </head>
+
+  <body>
+    <h2 class="text-center text-warning p-2 bg-dark">FILTROS CON JS</h2>
+    <button id="eliminar">Borrrars</button>
+
+    <div class="container m-5 p-3 shadow-sm border">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <input
+            id="entrada"
+            type="text"
+            class="form-control"
+            placeholder="filtrar dato"
+          />
+          <!-- tabla -->
+          <table class="table mt-4 table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+              </tr>
+            </thead>
+            <tbody id="users"></tbody>
+          </table>
+          <div id="alerta"></div>
+          <div id="pagination-container">
+            <!-- Pagination links will be added here dynamically using JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table id="myTable" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>john@example.com</td>
+          <td><button class="deleteBtn">Delete</button></td>
+        </tr>
+        <tr>
+          <td>Jane Doe</td>
+          <td>jane@example.com</td>
+          <td><button class="deleteBtn">Delete</button></td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" class="mt-8 grid grid-cols-6 gap-6" id="form">
+      <div class="col-span-6 sm:col-span-3">
+        <label for="city" class="block text-sm font-medium text-white">
+          City
+        </label>
+        <input
+          type="city"
+          id="city"
+          name="city"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+
+      <div class="col-span-6 sm:col-span-3">
+        <label for="streetName" class="block text-sm font-medium text-white">
+          Street Name
+        </label>
+        <input
+          type="text"
+          id="streetName"
+          name="streetName"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+      <div class="col-span-6 sm:col-span-3">
+        <label
+          for="streetNumber"
+          class="p-2 block text-sm font-medium text-white"
+        >
+          Street Number
+        </label>
+
+        <input
+          type="text"
+          id="streetNumber"
+          name="streetNumber"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+
+      <div class="col-span-6 sm:col-span-3">
+        <label for="areaSize" class="block text-sm font-medium text-white">
+          Area size
+        </label>
+        <input
+          type="number"
+          id="areaSize"
+          name="areaSize"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+      <div class="col-span-6 sm:col-span-3">
+        <label for="hasAc" class="block text-sm font-medium text-white">
+          Has AC
+        </label>
+        <input
+          type="text"
+          id="hasAc"
+          name="hasAc"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+      <div class="col-span-6 sm:col-span-3">
+        <label for="yearBuild" class="block text-sm font-medium text-white">
+          Year Build
+        </label>
+        <input
+          type="number"
+          id="yearBuild"
+          name="yearBuild"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+      <div class="col-span-6 sm:col-span-3">
+        <label for="rentPrice" class="block text-sm font-medium text-white">
+          Rent price
+        </label>
+        <input
+          type="number"
+          id="rentPrice"
+          name="rentPrice"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+      <div class="col-span-6 sm:col-span-3">
+        <label for="dataAvailable" class="block text-sm font-medium text-white">
+          Data available
+        </label>
+        <input
+          type="date"
+          id="dataAvailable"
+          name="dataAvailable"
+          class="p-2 mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+        />
+      </div>
+      <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+        <button
+          class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+        >
+          New Flat
+        </button>
+      </div>
+    </form>
+    <br />
+    <br />
+    <form id="filterForm">
+      <input name="city" type="text" placeholder="City" />
+      <input name="minarea" type="number" placeholder="Min Area" />
+      <input name="maxarea" type="number" placeholder="Max Area" />
+      <select name="price">
+        <option value="" selected>Selecione Un Valor</option>
+        <option value="0-500">0-500</option>
+        <option value="501-1000">501-1000</option>
+        <option value="1001-2000">1001-2000</option>
+        <option value="2001-10000">2001-10000</option>
+      </select>
+      <input type="submit" value="Filtrar" />
+    </form>
+    <br />
+    <br />
+    <table id="tableFlats" border="solid">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Street Name</th>
+          <th>Street Number</th>
+          <th>Area Size</th>
+          <th>has A/C</th>
+          <th>Year Build</th>
+          <th>Rent Price</th>
+          <th>Date Available</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="myscript.js"></script>
+  </body>
+</html>

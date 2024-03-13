@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerta</title>
+  </head>
+  <body>
+    <button id="miBoton">Haz clic para el alert</button>
+    <button id="removeALert">ELIMINAR alert event.</button>
+    <script>
+      var boton = document.getElementById("miBoton");
+      var remove = document.getElementById("removeALert");
+      const clickAlert = () => {
+        alert("¡Hola! Esto es un mensaje de alerta.");
+      };
+
+      const removeAlert = () => {
+        boton.removeEventListener("click", clickAlert);
+      };
+      boton.addEventListener("click", clickAlert);
+      remove.addEventListener("click", removeAlert);
+    </script>
+  </body>
+</html>

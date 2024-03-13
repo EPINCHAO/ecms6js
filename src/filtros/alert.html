@@ -1,0 +1,46 @@
+<!DOCTYPE html>Name user
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal que aparece y desaparece</title>
+    <style>
+      /* Estilos para el modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="modal" class="modal">
+      <p>¡Este es un modal que aparecerá y desaparecerá en unos segundos!</p>
+    </div>
+
+    <script>
+      // Función para mostrar el modal
+      function mostrarModal() {
+        document.getElementById("modal").style.display = "block";
+      }
+
+      // Función para ocultar el modal
+      function ocultarModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      // Mostrar el modal cuando la página cargue
+      window.onload = function () {
+        mostrarModal();
+        // Ocultar el modal después de 3 segundos (3000 milisegundos)
+        setTimeout(ocultarModal, 3000);
+      };
+    </script>
+  </body>
+</html>

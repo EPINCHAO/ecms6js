@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: teal;
+      }
+      .teal {
+        background: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="text" />
+    <h1>classList</h1>
+    <button onclick="addClasses()">Add classes</button>
+    <button onclick="removeClasses()">remove classes</button>
+  </body>
+  <script>
+    const i = document.getElementById("text");
+    i.setAttribute("placeholder", "Ingrese texto");
+    i.setAttribute("disabled", "");
+    const h1 = document.querySelector("h1");
+    function addClasses() {
+      h1.classList.add("red", "teal");
+    }
+    function removeClasses() {
+      h1.classList.remove("red", "teal");
+    }
+  </script>
+</html>
